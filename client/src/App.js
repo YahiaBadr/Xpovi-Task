@@ -6,16 +6,19 @@ import { Section1, Section2 } from "./Sections";
 function App() {
 	const [section, setSection] = useState("1");
 	const [section1Answers, setSection1Answers] = useState({});
-	const handleSubmission = useCallback(async section2Answers => {
-		const body = {
-			section1Answers,
-			section2Answers
-		};
-		await new Promise(resolve => resolve({ data: "Thank you!" }));
-		// await axios.post("mockedAPI", body)
-		setSection("3");
-    console.log(body)
-	},[section1Answers]);
+	const handleSubmission = useCallback(
+		async section2Answers => {
+			const body = {
+				section1Answers,
+				section2Answers
+			};
+			await new Promise(resolve => resolve({ data: "Thank you!" }));
+			// await axios.post("mockedAPI", body)
+			setSection("3");
+			console.log(body);
+		},
+		[section1Answers]
+	);
 	return (
 		<div className="App">
 			{section === "1" && (
