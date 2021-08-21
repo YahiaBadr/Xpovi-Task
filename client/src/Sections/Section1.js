@@ -5,7 +5,7 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import FormControl from "@material-ui/core/FormControl";
 import { Button } from "@material-ui/core";
 
-function Section1({ props }) {
+function Section1(props) {
 	const [answer1, setAnswer1] = useState("");
 	const [answer2, setAnswer2] = useState("");
 	const [answer3, setAnswer3] = useState("");
