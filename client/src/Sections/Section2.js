@@ -61,7 +61,12 @@ function Section2(props) {
 						variant="contained"
 						color="primary"
 						disabled={disabledNext}
-						onClick={props.next}
+						onClick={() =>
+							props.next({
+								answer1,
+								answer2
+							})
+						}
 						style={{ width: "49%" }}
 					>
 						Submit

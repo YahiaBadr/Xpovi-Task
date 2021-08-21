@@ -81,7 +81,13 @@ function Section1(props) {
 					color="primary"
 					disabled={disabledNext}
 					style={{ marginTop: "60px" }}
-					onClick={props.next}
+					onClick={() =>
+						props.next({
+							answer1,
+							answer2,
+							answer3
+						})
+					}
 				>
 					Next
 				</Button>
